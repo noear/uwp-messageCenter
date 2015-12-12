@@ -12,7 +12,8 @@ Noear.UWP.Data{
 
 示例代码：
 ```java
-//Page1.cs
+//Page1.cs ----------
+//
 protected override void OnNavigatedTo(NavigationEventArgs e) {
   //进入页面时订阅消息"On_Addin_Add"
   MessageCenter.Subscribe("On_Addin_Add", this, (args) => { 
@@ -31,7 +32,8 @@ protected override void OnNavigatedFrom(NavigationEventArgs e){
   }
 }
 
-//Page2.cs
+//Page2.cs ----------
+//
 void AddinItem_Click(){
   //给消息中心发一个消息，并传过去一个参数
   MessageCenter.SendMessage("On_Addin_Add", new HubTileModel(m));
